@@ -1,0 +1,54 @@
+
+<header class="header">
+    <div class="shell">
+		<div class="header__toogle">
+			<div class="menu-toggle js-menu-toggle" (click)="isActive()">
+			    <div>
+    				<span></span>
+    	
+    				<span></span>
+    	
+    				<span></span>
+    			</div>
+	    	</div><!-- /.menu-toggle js-menu-toggle -->
+		</div>
+		
+		<nav class="nav {{menuActiveClass}}">
+            <ul>
+                <li>Listings</li>
+                
+                <li>About</li>
+                
+                <li>Contact</li>
+            </ul>
+        </nav>
+				
+		<a href="#" class="header__logo">
+			<img src="assets/images/logo-brokers.png" alt="">
+		</a><!-- /.header__logo header__logo -->
+				
+		<div class="header__toogle">
+			<div class="menu-toggle js-menu-toggle" (click)="isActive()">
+			    <div>
+    		    	<span></span>
+    	
+    				<span></span>
+    	
+    	    		<span></span>
+    	    		
+    	    		<nav class="nav {{menuActiveClass}}">
+    				    <ul>
+                            <li>Listings</li>
+                            
+                            <li>About</li>
+                            
+                            <li>Contact</li>
+                        </ul>
+    				</nav>	    		
+                </div>
+			</div><!-- /.menu-toggle js-menu-toggle -->
+    	</div>
+				
+	</div><!-- /.shell shell -->
+</header><!-- /.header header -->
+	
