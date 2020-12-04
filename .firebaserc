@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "broker-efd1d"
+  },
+  "targets": {
+    "broker-efd1d": {
+      "hosting": {
+        "brokerSite": [
+          "broker-efd1d"
+        ]
+      }
+    }
+  }
+}
