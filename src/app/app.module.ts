@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FrontPageComponent } from './components/front-page/front-page/front-page.component';
+import { AppComponent } from './components/app-component/app.component';
+import { FrontPageComponent } from './components/front-page/front-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { FrontPageComponent } from './components/front-page/front-page/front-pag
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	title = 'brokerSite';
+	activeId = 1;
 	isMenuOn = false;
 	menuActiveClass = '';
     isActive():void {

@@ -1,54 +1,29 @@
 
-<header class="header">
+<header class="header bg-transparent">
     <div class="shell">
-		<div class="header__toogle">
-			<div class="menu-toggle js-menu-toggle" (click)="isActive()">
-			    <div>
-    				<span></span>
-    	
-    				<span></span>
-    	
-    				<span></span>
-    			</div>
-	    	</div><!-- /.menu-toggle js-menu-toggle -->
-		</div>
-		
-		<nav class="nav {{menuActiveClass}}">
-            <ul>
-                <li>Listings</li>
-                
-                <li>About</li>
-                
-                <li>Contact</li>
-            </ul>
-        </nav>
-				
 		<a href="#" class="header__logo">
-			<img src="assets/images/logo-brokers.png" alt="">
+			<img src="assets/images/logo-brokers.png" alt="" style="width: 75%; height: auto">
 		</a><!-- /.header__logo header__logo -->
+		
+		<nav class="nav">
+			<ul ngbNav [(activeId)]="activeId" class="nav nav-pills nav-color" >
+				<li [ngbNavItem]="1">
+					<a ngbNavLink >Home</a>
+				</li>
+				<li [ngbNavItem]="2" >
+				  <a ngbNavLink >Listings</a>
+				</li>
 				
-		<div class="header__toogle">
-			<div class="menu-toggle js-menu-toggle" (click)="isActive()">
-			    <div>
-    		    	<span></span>
-    	
-    				<span></span>
-    	
-    	    		<span></span>
-    	    		
-    	    		<nav class="nav {{menuActiveClass}}">
-    				    <ul>
-                            <li>Listings</li>
-                            
-                            <li>About</li>
-                            
-                            <li>Contact</li>
-                        </ul>
-    				</nav>	    		
-                </div>
-			</div><!-- /.menu-toggle js-menu-toggle -->
-    	</div>
+				<li [ngbNavItem]="3" >
+				  <a ngbNavLink>About</a>
+				</li>
 				
+				<li [ngbNavItem]="4" >
+					<a ngbNavLink>Contact</a>
+				  </li>
+			</ul>
+        </nav>	
 	</div><!-- /.shell shell -->
 </header><!-- /.header header -->
-	
+
+<app-front-page></app-front-page> 
