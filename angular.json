@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/fonts/custom-fonts.css",
               "src/styles.scss"
             ],
             "scripts": []
