@@ -29,7 +29,16 @@
 		<div class="shell">
 			<div class="row justify-content-center">
 				<div class="col-md-4" *ngFor="let ad of ads" style = "margin-bottom: 5%;">
-					<div class="card" style="width: 18rem;">
+					<div class="card" style="width: 18rem;">						
+						<div class="labels">
+							<span class="label">
+								FEATURED
+							</span>
+							
+							<span class="label label--right label--red">
+								HOT OFFER
+							</span>
+						</div>
 						<a class="view zoom" href="https://www.google.bg/">
 							<img class="card-img-top" [src]="ad" alt="Card image cap">
 						</a>

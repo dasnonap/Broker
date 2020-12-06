@@ -7,3 +7,8 @@
     font-family: Prata;
     src: url("PrataFont/Prata-Regular.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: LatoBold;
+    src: url("LatoFont/Lato-Bold.ttf") format("truetype");
+}
