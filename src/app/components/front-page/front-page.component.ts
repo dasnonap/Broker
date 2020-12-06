@@ -17,16 +17,15 @@ export class FrontPageComponent implements OnInit {
 	}
 	
 	generateAds(): void{
-		for( let index = 0; index < 10; index++ ){
-			let id = Math.floor(Math.random() * Math.floor(index*15));
-			
-			this.ads.push( `https://picsum.photos/id/${id}/286/121` );
+		for( let index = 0; index < 9; index++ ){
+			let id = Math.floor(Math.random() * Math.floor( 350 ) ) ;
+			this.ads.push( `https://picsum.photos/id/${id}/350/260` );
 		}
 	}
 	
 	generateSliderImages(): void{
 		for( let index = 0; index < 5; index++ ){
-			let id = Math.floor(Math.random() * Math.floor(index*11));
+			let id = Math.floor(Math.random() * Math.floor( 150 ));
 		
 			this.images.push( `https://picsum.photos/id/${id}/1865/600` );
 		}

@@ -8,7 +8,18 @@
     }
 }
 
-.row{
+.container{
+    width: 1600px;
+    margin-top: 35%;
+    text-align: center;
+    
+    .head{
+        margin: 20px;
+        
+        p{
+            font-size: 20px;
+        }
+    }
     
     .shell{
         position: relative;
@@ -18,5 +29,21 @@
         margin: auto;
         width: 100%;
     }
-
 }
+
+.card{
+    height: 360px;
+    width: 350px !important;
+
+    .zoom {
+        transition: transform .2s;
+        width: 350px;
+        height: 260px;
+        margin: 0 auto;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }    
+}
+
