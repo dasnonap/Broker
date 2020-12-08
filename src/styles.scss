@@ -76,6 +76,17 @@ p, span{
     }
 }
 
+.bg_color{
+	transition: background-color 0.5s ease;
+	background-color: orange;
+	height: 100px;
+}
+
+.medium_logo{
+	transition: width 0.5s ease !important;
+	width: 60% !important;
+}
+
 .nav-color{	
 	a{
 		color: white;
@@ -120,7 +131,6 @@ p, span{
 	border: 1px solid transparent !important;
 	
 	&:hover{
-		// color: orange !important;
 		background-color: orange !important;
 	}	
 }
