@@ -125,3 +125,23 @@
     }
 }
 
+.agents{
+    
+    .container{
+        width: 1600px;
+        margin-top: 30%;
+        text-align: center;
+    }
+    
+    .agent{
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        padding: 20px;
+        
+        .agent__img{
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    }
+}

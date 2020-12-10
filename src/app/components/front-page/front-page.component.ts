@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FrontPageComponent implements OnInit {
 	images = new Array();
 	ads = new Array();
+	agents = new Array();
 	constructor() { }
 
 	ngOnInit(): void {
 		this.generateAds();
 		this.generateSliderImages();
+		this.generateAgents();
 	
 	}
 	
@@ -29,7 +31,14 @@ export class FrontPageComponent implements OnInit {
 		
 			this.images.push( `https://picsum.photos/id/${id}/1865/600` );
 		}
+	}
 	
+	generateAgents(): void{
+		for( let index = 0; index < 3; index++ ){
+			let id = Math.floor(Math.random() * Math.floor( 50 ));
+			
+			this.agents.push( `https://picsum.photos/id/${id}/150/150` )
+		}
 	}
 
 }

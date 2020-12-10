@@ -1,5 +1,8 @@
 import { Component, HostListener } from '@angular/core';
-
+import { faFacebook, faFacebookSquare, faInstagram, faLinkedinIn, faMailchimp, faYoutube, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee, faEnvelope, faGrinHearts, faHandHoldingHeart, faHeartbeat, faHeartBroken, faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -7,10 +10,21 @@ import { Component, HostListener } from '@angular/core';
 	
 })
 export class AppComponent {
+
+	constructor(private router: Router) {}
+	
 	title = 'brokerSite';
 	activeId = 1;
 	isMenuOn = false;
 	menuActiveClass = '';
+	faFacebook = faFacebookSquare;
+	faLinkedIn = faLinkedinIn;
+	faInstagram = faInstagram;
+	faYoutube = faYoutube;
+	faMail = faEnvelope;
+	faLove = faHandHoldingHeart;
+	url = '';
+	
     isActive():void {
     
 		if ( this.isMenuOn ){
@@ -23,6 +37,10 @@ export class AppComponent {
 		}
 	}
 	
+	ngOnInit() {
+        this.url = this.router.url;
+    }
+    
 	@HostListener('window:scroll', [])
 	onWindowScroll() {
 	    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;

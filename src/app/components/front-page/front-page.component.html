@@ -74,3 +74,42 @@
 		  </button>
 	</div>
 </div>
+
+
+<div class="agents">
+	<div class="container">
+		<div class="head">
+			<h1 class="heading">
+				Our Agents
+			</h1>
+			
+			<p>
+				Create listings with all the features you'd espect
+			</p>
+		</div>
+		
+		<div class="shell">
+			<div class="row justify-content-center">
+				<div class="col-md-4" *ngFor="let agent of agents" style = "margin-bottom: 5%;">
+					<div class="agent" style="width: 18rem;">
+						<a class="view" href="https://www.google.bg/">
+							<img class="agent__img" [src]="agent" alt="Card image cap">
+						</a>
+						
+						<h5>
+							Brittany Watkins
+						</h5>
+						
+						<strong>
+							Agent , Smart Houses Inc
+						</strong>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ligula ac faucibus faucibus....
+						</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

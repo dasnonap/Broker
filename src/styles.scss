@@ -136,3 +136,36 @@ p, span{
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+
+.footer{
+	font-family: Prata;
+	font-size: 17px;
+	padding: 20px;
+	background-color: orange;
+	width: auto;
+	height: 200px;
+	text-align: center;
+	
+	.footer__socials{	
+		a{
+			color: white;
+			text-decoration : none;
+			
+			&:hover {
+				color: black;
+			}
+		}
+		
+		
+		li{
+			display: inline;
+			
+			+ li{
+				margin-left: 30px;
+			}
+		}  
+		
+		
+	}
+}
