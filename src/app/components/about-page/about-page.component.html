@@ -1,1 +1,92 @@
-<p>about-page works!</p>
+<div class="hero">	
+	<div *ngIf="images">
+		<ngb-carousel>
+			<ng-template ngbSlide *ngFor="let image of images">
+			  <div class="picsum-img-wrapper">
+				<img [src]="image" alt="Random first slide"  style="width: 100%; height: 60vh">
+			  </div>
+			  <div class="carousel-caption">
+				<h3>Аbout Us Images</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore placeat magni. Eos dicta doloremque distinctio repellendus quisquam, delectus perferendis!</p>
+			  </div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+</div>
+
+
+<div class="info">
+    <div class="container">
+        <div class="info__head">
+            <h3>
+                About Our Company
+            </h3>
+        </div>
+        
+        <div class="info__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque saepe at ipsam tempora doloremque, voluptate assumenda hic facilis cumque aliquid architecto ab impedit non quae. Repellat odit dolore dolor placeat, nisi ab adipisci provident ducimus illo ipsum ad, blanditiis laudantium fuga quasi cumque minus eius neque earum recusandae, accusamus quaerat.</p>
+        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea dolores modi iste? Reprehenderit delectus id nostrum itaque exercitationem quo officia autem eius, quisquam quas ducimus dolorum provident magnam ut.</p>
+        
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus obcaecati ipsum praesentium ea nulla doloribus quibusdam, totam natus rem laboriosam.</p>
+        </div>
+    </div>
+</div>
+
+<div class="agents">
+	<div class="container">
+		<div class="head">
+			<h1 class="heading">
+				Our Team
+			</h1>
+			
+			<p>
+				Create listings with all the features you'd espect
+			</p>
+		</div>
+		
+		<div class="shell">
+			<div class="row justify-content-center">
+				<div class="col-md-4" *ngFor="let agent of agents" style = "margin-bottom: 5%;">
+					<div class="agent" style="width: 18rem;">
+						<a class="view" href="https://www.google.bg/">
+							<img class="agent__img" [src]="agent" alt="Card image cap">
+						</a>
+						
+						<h5>
+							Brittany Watkins
+						</h5>
+						
+						<strong>
+							Agent , Smart Houses Inc
+						</strong>
+						
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus ligula ac faucibus faucibus....
+						</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="partners">
+    <div class="container">
+        <div class="partners__head">
+            <h3>
+                Our Partners
+            </h3>
+            
+            <p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, sed.
+			</p>
+        </div>
+        
+        <div *ngIf="partners" class="partners__body">
+            <div *ngFor=" let partner of partners" class="partner">
+                <img class="" src="{{ partner }}">
+            </div>
+        </div>
+    </div>
+</div>
