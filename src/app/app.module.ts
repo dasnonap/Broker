@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { AdPageComponent } from './components/ad-page/ad-page.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AdPageComponent } from './components/ad-page/ad-page.component';
     AppComponent,
     FrontPageComponent,
     AboutPageComponent,
-    AdPageComponent
+    AdPageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
