@@ -1,0 +1,116 @@
+<div class="hero">	
+	<div *ngIf="images">
+		<ngb-carousel>
+			<ng-template ngbSlide *ngFor="let image of images">
+			  <div class="picsum-img-wrapper">
+				<img [src]="image" alt="Random first slide"  style="width: 100%; height: 60vh">
+			  </div>
+			  <div class="carousel-caption">
+				<h3>Contact image</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore placeat magni. Eos dicta doloremque distinctio repellendus quisquam, delectus perferendis!</p>
+			  </div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+</div>
+
+<div class="contact">
+    <div class="container">
+        <div class="contact__head">
+            <h3>
+                Feel free to contact us any time
+            </h3>
+        </div>
+        
+        <div class="contact_body">
+            <div class="contact__form">
+                <form action="" id="contact_form">                
+                    <div class="form__row row justify-content-center">
+                        <div class="form_group col-md-6">
+                            <label>
+                                <h5>First Name</h5>
+                            </label>
+                            <br>
+                            <input type="text" placeholder="First Name">                
+                        </div>
+                        
+                        <div class="form_group col-md-6">
+                            <label>
+                                <h5>Last Name</h5>
+                            </label>
+                            <br>
+                            <input type="text" placeholder="Last Name">               
+                        </div>
+                    </div>
+                    
+                    <div class="form__row justify-content">
+                        <div class="form_group">
+                            <label>
+                                <h5>Email</h5>
+                            </label>
+                            <br>
+                            <input type="text" placeholder="Email">                
+                        </div>
+                    </div>
+                    
+                    <div class="form__row justify-content">
+                        <div class="form_group">
+                            <label>
+                                <h5>Message</h5>
+                            </label>
+                            <br>
+                            <textarea wrap="off" placeholder="Remember, be nice!" cols="30" rows="5"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form__row">
+                        <div class="form_group">
+                            <input type="submit" value="Submit" class="btn btn-lg">                
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="contact__address">
+                <h5>
+                    Address
+                </h5>
+                
+                <p>
+                    1 Studentska
+                    <br>
+                    Varna, Bulgaria
+                </p>
+                <hr class="devider">
+                
+                <h6>
+                    Stanimir Stoyanov
+                </h6>
+                <p>
+                    Project Manager
+                    <br>
+                    Varna, Bulgaria
+                </p>
+                <hr class="devider">
+                <h6>
+                    Ivan Mihov
+                </h6>
+                <p>
+                    Front End Designer
+                    <br>
+                    Varna, Bulgaria
+                </p>
+                
+                <hr class="devider">
+                <h6>
+                    Stoyan Ganchev
+                </h6>
+                <p>
+                    Back End Developer
+                    <br>
+                    Varna, Bulgaria
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+.hero{
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    img{
+        width: 100%;
+        height: 25%;
+    }
+}
+
+.contact{
+    width: 1920px;
+    text-align: center;
+    font-family: Lato;
+    margin-top: 25%;
+    
+    h3, h5, h6{
+        font-family: Prata;
+    }
+    .container{
+        padding: 50px;
+    }
+    
+    .devider{
+        background-color: white;
+        width:70%;
+        text-align:left;
+        margin-left:0;
+    }
+    
+    .contact_body{
+        height: 600px;
+        text-align: left;
+        margin: 30px;
+        
+        &:before{
+            content: " ";
+            display: none;
+            clear: both;
+        }
+    }
+    
+    .contact__form{
+        display: block;
+        float: left;
+        background: orange;
+        padding: 20px;
+        border-radius: 5px;
+        width: 58%;
+    }
+    
+    .contact__address{
+        display: block;
+        float: left;
+        background: orange;
+        padding: 20px;
+        border-radius: 5px;
+        width: 40%;
+        margin-left: 10px;
+        
+        p{
+            font-weight: 600;
+        }
+    }
+    
+    .form__row{
+        + .form__row{
+            margin-top: 40px;
+        }
+        
+        .form_group{
+            input, select, option, textarea{
+                width: 100%;
+                height: 40px;
+                border: 1px solid #e8e8e8;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            
+            textarea{
+                height: 200px;
+                outline: none;
+                resize: none;
+                overflow: auto;
+            }
+        }
+    }
+}
