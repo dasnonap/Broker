@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FrontPageComponent } from './components/front-page/front-page.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { AdPageComponent } from './components/ad-page/ad-page.component';
+
 const routes: Routes = [ 
-  { path: '', component: FrontPageComponent }, 
+  { path: '', component: FrontPageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'ad', component: AdPageComponent },
 ];
 
 @NgModule({

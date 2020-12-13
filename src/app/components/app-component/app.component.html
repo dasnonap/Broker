@@ -7,26 +7,26 @@
 		
 		<nav class="nav">
 			<ul ngbNav [(activeId)]="activeId" class="nav nav-pills nav-color" >
-				<li [ngbNavItem]="1">
-					<a ngbNavLink >Home</a>
+				<li [ngbNavItem]="1" >
+					<a ngbNavLink routerLink="/">Home</a>
 				</li>
 				<li [ngbNavItem]="2" >
-				  <a ngbNavLink >Listings</a>
+				  <a ngbNavLink routerLink="/listings" >Listings</a>
 				</li>
 				
 				<li [ngbNavItem]="3" >
-				  <a ngbNavLink>About</a>
+				  <a ngbNavLink routerLink="/about">About</a>
 				</li>
 				
 				<li [ngbNavItem]="4" >
-					<a ngbNavLink>Contact</a>
-				  </li>
+					<a ngbNavLink routerLink="/contact">Contact</a>
+				</li>
 			</ul>
         </nav>	
 	</div><!-- /.shell  -->
 </header><!-- /.header  -->
 
-<app-front-page></app-front-page> 
+<router-outlet></router-outlet>
 
 <footer>
 	<div class="footer">

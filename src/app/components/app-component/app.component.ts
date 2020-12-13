@@ -14,7 +14,7 @@ export class AppComponent {
 	constructor(private router: Router) {}
 	
 	title = 'brokerSite';
-	activeId = 1;
+	activeId = 2;
 	isMenuOn = false;
 	menuActiveClass = '';
 	faFacebook = faFacebookSquare;

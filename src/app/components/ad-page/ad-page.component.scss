@@ -1,0 +1,114 @@
+.hero{
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    img{
+        width: 100%;
+        height: 25%;
+    }
+}
+
+
+.info{
+    h3{
+        font-family: Prata;
+    }
+    
+    .container{
+        width: 1600px;
+        margin-top: 25%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .info__body{
+        margin: 20px;
+    }
+    
+    .info__head{
+        margin-bottom: 60px;
+    }
+    
+    .info__amenities{
+        margin-top: 60px;
+        
+        .amenities{
+            margin-top: 30px;
+            
+            li{
+                display:inline-block;
+                width: 150px;
+                height: 100px;
+                
+                .image {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    margin: 0px;
+                }
+                
+                + li {
+                    margin-left: 100px;
+                }
+            }
+            
+            &:before{
+                content: " ";
+                display: table;
+                clear: both;
+            }
+        }
+    }
+}
+
+.gallery{
+    .container{
+        width: 1920px;
+        
+        .card{
+            height: 260px;
+            width: 360px !important;
+        }
+    }
+}
+
+.tour{
+    width: 1920px;
+    background-color: #e8e8e8;
+    text-align: center;
+    font-family: Lato;
+    
+    h3, h5{
+        font-family: Prata;
+    }
+    .container{
+        padding: 50px;
+    }
+    
+    .tour_body{
+        text-align: left;
+        margin: 30px;
+    }
+    
+    .form__row{
+    
+        + .form__row{
+            margin-top: 40px;
+        }
+        
+        .form_group{
+            input, select, option{
+                width: 100%;
+                height: 40px;
+                border: 1px solid #e8e8e8;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            
+            input[type=textarea]{
+                height: 200px;
+            }
+        }
+    }
+}

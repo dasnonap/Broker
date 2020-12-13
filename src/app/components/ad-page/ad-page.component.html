@@ -1,0 +1,166 @@
+<div class="hero">	
+	<div *ngIf="images">
+		<ngb-carousel>
+			<ng-template ngbSlide *ngFor="let image of images">
+			  <div class="picsum-img-wrapper">
+				<img [src]="image" alt="Random first slide"  style="width: 100%; height: 60vh">
+			  </div>
+			  <div class="carousel-caption">
+				<h3>Ad images</h3>
+				<p>Ad Info</p>
+			  </div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+</div>
+
+<div class="info">
+    <div class="container">
+        <div class="info__head">
+            <h3>
+                Description
+            </h3>
+        </div>
+        
+        <div class="info__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque saepe at ipsam tempora doloremque, voluptate assumenda hic facilis cumque aliquid architecto ab impedit non quae. Repellat odit dolore dolor placeat, nisi ab adipisci provident ducimus illo ipsum ad, blanditiis laudantium fuga quasi cumque minus eius neque earum recusandae, accusamus quaerat.</p>
+        
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ea dolores modi iste? Reprehenderit delectus id nostrum itaque exercitationem quo officia autem eius, quisquam quas ducimus dolorum provident magnam ut.</p>
+        </div>
+        
+        <div class="info__amenities">
+            <h5>
+                Details
+            </h5>
+            
+            <ul class="amenities">
+                <li>
+                    <div class="image">
+                        <img src="../../../assets/images/bedroom-big.png" alt="">
+                    </div>
+                    
+                    <div class="content">
+                        <span> Bedrooms </span>
+                        <br>
+                        <span>2</span>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="image">
+                        <img src="../../../assets/images/bath-big.png" alt="">
+                    </div>
+                    
+                    <div class="content">
+                        <span> Bathrooms </span>
+                        <br>
+                        <span>4</span>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="image">
+                        <img src="../../../assets/images/area-big.png" alt="">
+                    </div>
+                    
+                    <div class="content">
+                        <span> Property Size </span>
+                        <br>
+                        <span> 1300 Sq Ft </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="gallery">
+    <div class="container" *ngIf="images">
+        <div class="row justify-content-center">
+            <div class="col-md-4" *ngFor="let image of gallery" style = "margin-bottom: 5%;">
+                <div class="card" style="width: 18rem;">						
+                    <img class="card-img-top" [src]="image" alt="Card image cap">
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tour">
+    <div class="container">
+        <div class="tour__head">
+            <h3>
+                Schedule A Tour
+            </h3>
+        </div>
+        
+        <div class="tour_body">
+            <form action="" id="tour_form">
+                <div class="form__row row justify-content-center">
+                    <div class="form_group col-md-4">
+                        <label>
+                            <h5>Date</h5>
+                        </label>
+                        <br>
+                        <input type="number" placeholder="Enter Date">                
+                    </div>
+                    
+                    <div class="form_group col-md-4">
+                        <label>
+                            <h5>Time</h5>
+                        </label>
+                        <br>
+                        <select name="hours" id="hours" form="tour_form">
+                            <option *ngFor=" let hour of hours" >
+                                {{ hour }}
+                            </option>
+                        </select>               
+                    </div>
+                </div>
+                
+                <div class="form__row row justify-content-center">
+                    <div class="form_group col-md-3">
+                        <label>
+                            <h5>Name</h5>
+                        </label>
+                        <br>
+                        <input type="text" placeholder="Name">                
+                    </div>
+                    
+                    <div class="form_group col-md-3">
+                        <label>
+                            <h5>Phone</h5>
+                        </label>
+                        <br>
+                        <input type="number" placeholder="Phone">               
+                    </div>
+                    
+                    <div class="form_group col-md-3">
+                        <label>
+                            <h5>Email</h5>
+                        </label>
+                        <br>
+                        <input type="text" placeholder="Email">               
+                    </div>
+                </div>
+                
+                <div class="form__row justify-content">
+                    <div class="form_group">
+                        <label>
+                            <h5>Message</h5>
+                        </label>
+                        <br>
+                        <input type="textarea" placeholder="Message">                
+                    </div>
+                </div>
+                
+                <div class="form__row row justify-content-center">
+                    <div class="form_group">
+                        <input type="submit" value="Submit" class="btn btn-lg">                
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

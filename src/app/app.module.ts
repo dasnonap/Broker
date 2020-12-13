@@ -6,12 +6,16 @@ import { AppComponent } from './components/app-component/app.component';
 import { FrontPageComponent } from './components/front-page/front-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { AdPageComponent } from './components/ad-page/ad-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    AboutPageComponent,
+    AdPageComponent
   ],
   imports: [
     BrowserModule,
