@@ -1,0 +1,66 @@
+<div class="hero">	
+	<div *ngIf="images">
+		<ngb-carousel  >
+			<ng-template ngbSlide *ngFor="let image of images">
+			  <div class="picsum-img-wrapper">
+				<img [src]="image" alt="Random first slide"  style="width: 100%; height: 60vh" class="convertable">
+			  </div>
+			  <div class="carousel-caption">
+				<h3>First slide label</h3>
+				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+			  </div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+</div>
+
+<div class="featured-houses">
+	<div class="container">
+		<div class="head">
+			<h1 class="heading">
+				Featured Luxury Property
+			</h1>
+			
+			<p>
+				Create listings with all the features you'd espect
+			</p>
+		</div>
+		
+		<div class="shell">
+			<div class="row justify-content-center">
+				<div class="col-md-4 convertable" *ngFor="let ad of ads" style = "margin-bottom: 5%;">
+					<div class="card" style="width: 18rem;">						
+						<div class="labels">							
+							<span class="label label--right label--red">
+								HOT OFFER
+							</span>
+						</div>
+						<a class="view zoom" href="https://www.google.bg/">
+							<img class="card-img-top" [src]="ad" alt="Card image cap">
+						</a>
+						
+						
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<div class="card-text">
+								<div class="text text--price">
+									$80,000
+								</div>
+								
+								<div class="text text--amenities">
+									<ul class="amenities">
+										<li class="amenity amenity--beds">2</li>
+										
+										<li class="amenity amenity--baths">1</li>
+										
+										<li class="amenity amenity--area">200</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

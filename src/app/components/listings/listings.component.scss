@@ -1,0 +1,155 @@
+.hero{
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    
+    img{
+        width: 100%;
+        height: 25%;
+    }
+}
+
+.container{
+    width: 1600px;
+    margin-top: 30%;
+    text-align: center;
+    
+    .head{
+        margin: 20px;
+        
+        p{
+            font-size: 20px;
+        }
+    }
+    
+    .shell{
+        position: relative;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.featured-houses{
+    
+    @media only screen and (max-width: 1200px) {
+        .convertable{
+            flex: 0 0 41.6666666667%;
+            max-width: 41.6666666667%;
+        }
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .container{
+            margin-top: 50%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 770px) {
+        .container{
+            margin-top: 80%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+}
+
+.card{
+    height: 360px;
+    width: 350px !important;
+    
+    .labels{
+        position: absolute;
+        color: white;
+        top: 20px;
+        font-family: LatoBold;
+        left: 20px;
+        
+        .label{
+            position:absolute;
+            background-color: #a58a56;
+            width: 90px;
+            border: 1px solid #a58a56;
+            border-radius: 10px;
+        }
+        
+        .label--right{
+            left: 220px;
+        }
+        
+        .label--red{
+            background-color: red;
+            border: 1px solid red;
+        }
+    }
+    
+    .zoom {
+        transition: transform .2s;
+        width: 350px;
+        height: 260px;
+        margin: 0 auto;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+    }    
+    
+    .card-text{
+        font-family: 'Lato';
+        
+        .text{
+            font-size: 17px;
+            display: block;
+        }
+        
+        .text--price{
+            float: left;
+        }
+        
+        .text--amenities{
+            float: right;
+            font-size: 15px;
+            
+            .amenities{
+                list-style-position: inside;
+                
+                li{
+                    display: inline;
+                }
+                
+                li + li {
+                    margin-left: 20px;
+                }
+                
+                .amenity::before {
+                    color: transparent;
+                    font-size: 1px;
+                    content: " ";
+                    margin-left: -1.3em;
+                    margin-right: 5px;
+                    padding: 15px 10px 5px 8px;
+                }
+                
+                .amenity--beds::before{
+                    background-image: url(../../../assets/images/bedroom.png);
+                }
+                
+                .amenity--baths::before{
+                    background-image: url(../../../assets/images/bath.png);
+                }
+                
+                .amenity--area::before{
+                    background-image: url(../../../assets/images/area.png);
+                }
+            }
+        }
+    }
+}
