@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { AdPageComponent } from './components/ad-page/ad-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ListingsComponent } from './components/listings/listings.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ContactComponent } from './components/contact/contact.component';
     FrontPageComponent,
     AboutPageComponent,
     AdPageComponent,
-    ContactComponent
+    ContactComponent,
+    ListingsComponent
   ],
   imports: [
     BrowserModule,

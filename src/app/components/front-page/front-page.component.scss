@@ -2,6 +2,7 @@
     width: 100%;
     height: 200px;
     z-index: -1;
+    
     img{
         width: 100%;
         height: 25%;
@@ -23,12 +24,42 @@
     
     .shell{
         position: relative;
-        max-width: 1124px;
         padding-left: 18px;
         padding-right: 18px;
         margin: auto;
         width: 100%;
     }
+}
+
+.featured-houses{
+    
+    @media only screen and (max-width: 1200px) {
+        .convertable{
+            flex: 0 0 41.6666666667%;
+            max-width: 41.6666666667%;
+        }
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .container{
+            margin-top: 50%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 770px) {
+        .container{
+            margin-top: 80%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
 }
 
 .card{
@@ -140,6 +171,37 @@
         .agent__img{
             border-radius: 50%;
             margin-bottom: 10px;
+        }
+    }
+    
+    @media only screen and (max-width: 1200px) {
+        .convertable{
+            flex: 0 0 41.6666666667%;
+            max-width: 41.6666666667%;
+        }
+        
+        .agent{
+            width: 100% !important;
+        }
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        .container{
+            margin-top: 50%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 770px) {
+        .container{
+            margin-top: 80%;
+        }
+        .convertable{
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 }
