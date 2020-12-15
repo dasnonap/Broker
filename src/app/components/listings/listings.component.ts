@@ -1,4 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AdvertisementPreviewModel } from 'src/app/models/advertisement';
+import { AdvertsService } from 'src/app/services/adverts-service.service';
 
 @Component({
 	selector: 'app-listings',
@@ -7,19 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListingsComponent implements OnInit {
 	images = new Array();
-	ads = new Array();
-	constructor() { }
+	ads : AdvertisementPreviewModel[] = [];
+
+	private subscription:Subscription;
+	
+	constructor(private advertsService: AdvertsService) {
+		this.subscription = new Subscription();
+	 }
 
 	ngOnInit(): void {
 		this.generateAds();
 		this.generateSliderImages();
 	}
 	
-	generateAds(): void{
-		for( let index = 0; index < 15; index++ ){
-			let id = Math.floor(Math.random() * Math.floor( 350 ) ) ;
-			this.ads.push( `https://picsum.photos/id/${id}/350/260` );
+	async generateAds(): Promise<void>{
+		await this.advertsService.getAdvertPreviews().toPromise().then((response: JSON[]) => {
+			response.forEach (ad => this.ads.push(new AdvertisementPreviewModel().setValues(ad))); 
+		  },
+		  (errorResponse: HttpErrorResponse) => {
+			console.log(errorResponse);
+		  })
+
+		  for( let index = 0; index < 15 - (this.ads.length-2); index++ ){
+			this.ads.push(new AdvertisementPreviewModel());
 		}
+
+		
 	}
 	
 	generateSliderImages(): void{
@@ -28,6 +45,11 @@ export class ListingsComponent implements OnInit {
 		
 			this.images.push( `https://picsum.photos/id/${id}/1865/600` );
 		}
+	}
+
+	getImageUrl(ad: AdvertisementPreviewModel) : string			//нужно за подаване на URL на снимката
+	{
+		return ad.imageUrl;
 	}
 
 }

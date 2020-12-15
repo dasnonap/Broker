@@ -36,24 +36,24 @@
 							</span>
 						</div>
 						<a class="view zoom" href="https://www.google.bg/">
-							<img class="card-img-top" [src]="ad" alt="Card image cap">
+							<img class="card-img-top" [src]="getImageUrl(ad)" alt="Card image cap">
 						</a>
 						
 						
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
+							<h5 class="card-title">{{ ad.advertName }}</h5>
 							<div class="card-text">
 								<div class="text text--price">
-									$80,000
+									${{ ad.price }}
 								</div>
 								
 								<div class="text text--amenities">
 									<ul class="amenities">
-										<li class="amenity amenity--beds">2</li>
+										<li class="amenity amenity--beds">{{ ad.bedroomCount }}</li>
 										
-										<li class="amenity amenity--baths">1</li>
+										<li class="amenity amenity--baths">{{ ad.bathroomCount }}</li>
 										
-										<li class="amenity amenity--area">200</li>
+										<li class="amenity amenity--area">{{ ad.area }}</li>
 									</ul>
 								</div>
 							</div>

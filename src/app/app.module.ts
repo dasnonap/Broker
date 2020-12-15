@@ -10,6 +10,7 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { AdPageComponent } from './components/ad-page/ad-page.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ListingsComponent } from './components/listings/listings.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ListingsComponent } from './components/listings/listings.component';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
